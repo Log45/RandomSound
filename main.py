@@ -1,13 +1,21 @@
 from playsound import playsound
 import time
 import random as rand
+import os
 
-
+sounds = list(filter(lambda x: ".mp3" in x, os.listdir(".")))
+print(sounds)
 def main():
-    while True:
-        interval = rand.randint(5, 600)
-        time.sleep(interval)
-        playsound("calmdown.mp3")
+    playsound("pipe.mp3")
+    try:
+        while True:
+            interval = rand.randint(5, 600)
+            idx = rand.randint(0, len(sounds))
+            playsound(sounds[idx])
+            time.sleep(interval)
+    except KeyboardInterrupt:
+        playsound()
+        exit()
 
 
 if __name__ == "__main__":
