@@ -4,17 +4,17 @@ import random as rand
 import os
 
 sounds = list(filter(lambda x: ".mp3" in x, os.listdir(".")))
-print(sounds)
+sounds.remove("fuck.mp3") if "fuck.mp3" in sounds else None
+
 def main():
-    playsound("pipe.mp3")
     try:
         while True:
             interval = rand.randint(5, 600)
             idx = rand.randint(0, len(sounds))
-            playsound(sounds[idx])
             time.sleep(interval)
+            playsound(sounds[idx])
     except KeyboardInterrupt:
-        playsound()
+        playsound("fuck.mp3")
         exit()
 
 
