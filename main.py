@@ -10,7 +10,7 @@ file_dir = os.getcwd
 fuck = []
 for sound in sounds:
     file_dir = os.getcwd()
-    fuck.append(file_dir + "/" + sound)
+    fuck.append(file_dir + "/resources/" + sound)
 
 sounds = fuck
 
