@@ -17,7 +17,7 @@ sounds = fuck
 def main():
     try:
         while True:
-            interval = rand.randint(5, 15)
+            interval = rand.randint(5, 600)
             idx = rand.randint(0, len(sounds))
             time.sleep(interval)
             playsound(sounds[idx])
