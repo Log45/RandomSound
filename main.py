@@ -22,7 +22,7 @@ def main():
             time.sleep(interval)
             playsound(sounds[idx])
     except KeyboardInterrupt:
-        playsound(file_dir + "/fuck.mp3")
+        playsound(file_dir + "/resources/fuck.mp3")
         exit()
 
 
