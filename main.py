@@ -3,16 +3,14 @@ import time
 import random as rand
 import os
 
-sounds = list(filter(lambda x: ".mp3" in x, os.listdir(".")))
+sounds = list(filter(lambda x: ".mp3" in x, os.listdir("./resources")))
 sounds.remove("fuck.mp3") if "fuck.mp3" in sounds else None
 
-file_dir = os.getcwd
-fuck = []
+file_dir = os.getcwd()
+f = []
 for sound in sounds:
-    file_dir = os.getcwd()
-    fuck.append(file_dir + "/resources/" + sound)
-
-sounds = fuck
+    f.append(file_dir + "/resources/" + sound)
+sounds = f
 
 def main():
     try:
